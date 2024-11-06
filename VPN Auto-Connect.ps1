@@ -3,7 +3,7 @@
 Write-Host " Available VPNs " -BackgroundColor White -ForegroundColor Black
 Get-VpnConnection | Select-Object -ExpandProperty Name
 
-$vpnName = Read-Host -Prompt "`nType the name of a VPN connection to auto-connect to" -
+$vpnName = Read-Host -Prompt "`nType the name of a VPN connection to auto-connect to"
 
 $taskProperties = [ordered]@{
     "TemplatePath"    = "$($PSScriptRoot)\Task Template.xml"
